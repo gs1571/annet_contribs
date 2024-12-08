@@ -29,6 +29,7 @@ Modify existing generators. If tag `damaged` is assigned to the device in Netbox
 > Mesh defines point-to-point addresses on connected interfaces, BGP peerings (`peers`) и BGP options (`global_options`) based on device connections in Netbox.
 > - `global_options` is defined in function with decorator `device`,
 > - `peers` is defined in function with decorator `direct`.  
+> 
 > You can find this functions in `mesh_view`. Redistribution parameters are in `global_options`.
 
 **Result:**
