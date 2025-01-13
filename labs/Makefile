@@ -13,7 +13,8 @@ build_annet:
 	rm -rf ./netsshsetup
 
 build_netbox:
-	@git clone -b release https://github.com/netbox-community/netbox-docker.git
+	@git clone https://github.com/netbox-community/netbox-docker.git
+	@cd netbox-docker && git fetch --tags && git checkout tags/3.0.2 && cd ..
 	@cp ./netbox-docker/docker-compose.yml ./netbox-docker/docker-compose.yml.bak
 	@sed -i.bak 's/VERSION-v4.1-3.0.2/VERSION-v3.7/g' ./netbox-docker/docker-compose.yml
 	@sed -i.bak 's/0s/00s/g' ./netbox-docker/docker-compose.yml
